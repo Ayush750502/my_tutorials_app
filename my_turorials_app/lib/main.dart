@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import './homePage_01.dart';
-import './testPage_02.dart';
+import 'home_page_01.dart';
+import 'test_page_02.dart';
 
 void main() {
   runApp(const MyApp());
@@ -16,10 +16,11 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.lightBlue),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      initialRoute: './home',
       routes: {
-        "./": (context) => const MyHomePage(title: "Flutter Demo Home Page"),
-        "./test": (context) => TestActivity(),
+        "./home": (context) =>
+            const MyHomePage(title: "Flutter Demo Home Page"),
+        "./test": (context) => const TestActivity(),
       },
     );
   }
